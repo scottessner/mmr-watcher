@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  watcher:
+    restart: unless-stopped
+    build: .
+    environment:
+      - API_URL=https://ssessner.com/mmr-api/v1
+    volumes:
+      - /data/media:/data
+
